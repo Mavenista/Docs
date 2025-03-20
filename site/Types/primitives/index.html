@@ -1,0 +1,595 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  
+
+  
+  <meta http-equiv="content-language" content="en">
+  
+  
+  <meta property="og:site_name" content="Tarot" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title"
+    content="Primitive Data Types | Tarot" />
+  <meta name="twitter:card" content="Summary Card" />
+  
+  <meta name="description" content="Every programming language has some built-in data types that can be used">
+  <meta property="og:description" content="Every programming language has some built-in data types that can be used" />
+  <meta name="twitter:description" content="Every programming language has some built-in data types that can be used" />
+  
+  
+  <meta property="og:image" content="../.." />
+  
+  
+
+  
+  <title>Primitive Data Types | Tarot</title>
+  
+
+  
+
+  
+  
+
+<link rel="stylesheet" href="../../css/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../../css/theme.css">
+
+
+<link rel="stylesheet" href="../../css/colors/auto.css">
+<link rel="stylesheet" href="../../css/highlight/default.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="../../css/highlight/monokai.css" media="(prefers-color-scheme: dark)">
+
+
+
+
+
+<script async>var base_url = '../..';</script>
+<script src="../../js/jquery-3.6.1.slim.min.js"></script>
+<script src="../../js/bootstrap.bundle.min.js"></script>
+<script async src="../../js/highlight.min.js"></script>
+  
+  
+  
+</head>
+
+<body    <header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 ">
+    <div class="container">
+      <a class="navbar-brand text-body" asp-area="" href="../../ /">
+        
+        
+        Tarot
+        
+      </a>
+      <div class="print-hide">
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+          <div class="d-none d-md-flex input-group mb-3">
+            
+            <input class="form-control" type="search" id="searchbox" accesskey="/"
+              placeholder="Search in here" aria-label="Search"
+              aria-describedby="search-btn" />
+            <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="search(false);">
+              <i class="bi bi-search"></i>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar border-bottom box-shadow mb-3 d-md-none print-hide">
+    <div class="container">
+      <div class="navbar-collapse d-flex">
+        <p>
+        <div class="d-flex input-group mb-3">
+          
+          <button class="btn btn-outline-secondary" onclick="toggle_nav(this);" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav" title="Show Navigation"><i class="bi bi-book"></i></button>
+          
+          
+          <input class="form-control" type="search" id="searchbox_mobile" accesskey="/"
+            placeholder="Search in here" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="button" onclick="search(true);"><i
+              class="bi bi-search"></i></button>
+          
+          
+          <button class="btn btn-outline-secondary" onclick="toggle_toc(this);" type="button" data-bs-toggle="collapse"
+            data-bs-target="#toc"><i class="bi bi-list-ul"></i></button>
+          
+        </div>
+        </p>
+      </div>
+    </div>
+  </nav>
+  </header>
+  
+  
+  
+  
+  <div class="container">
+    <div class="pb-3">
+      <div class="row">
+        
+        
+        
+
+<div class="col-12 col-md-2 print-hide">
+    <div class="collapse d-md-block text-nowrap" id="nav" style="overflow-x:scroll;">
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-muted"
+                    href="../..">Home</a></li>
+            
+            
+            
+            <li class="list-group-item">
+                <a class="nav_cop  text-muted"
+                    aria-expanded="false" data-bs-toggle="collapse" role="button">Getting Started</a>
+                <ul class="collapse list-group list-group-flush  ">
+                    
+            
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-muted"
+                    href="../../Getting%20Started/Installation/">Installation</a></li>
+            
+            
+            
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-muted"
+                    href="../../Getting%20Started/setting_things_up/">Setting Things Up</a></li>
+            
+            
+            
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-muted"
+                    href="../../Getting%20Started/hello_world/">Hello World</a></li>
+            
+            
+                </ul>
+            </li>
+            
+            
+            
+            <li class="list-group-item">
+                <a class="nav_cop  text-body"
+                    aria-expanded="false" data-bs-toggle="collapse" role="button">Types</a>
+                <ul class="collapse list-group list-group-flush show ">
+                    
+            
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-body"
+                    href="./">Primitive Data Types</a></li>
+            
+            
+                </ul>
+            </li>
+            
+            
+        </ul>
+    </div>
+</div>
+        
+        
+        
+
+
+
+
+<div class="col-12 col-md-2 order-md-3 print-hide">
+  <div class="collapse d-md-block text-nowrap" id="toc" style="overflow-x:scroll;">
+    <span>In this article</span>
+    <hr />
+    <ul class="list-group list-group-flush">
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#what-is-a-primitive-data-type">What is a Primitive Data Type?</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#integer-primitive-data-types">Integer Primitive Data Types</a>
+        
+        <ul class="list-group list-group-flush">
+          
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#signed-and-unsigned">Signed and Unsigned</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#all-integer-data-types">All Integer Data Types</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#floats">Floats</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#which-integer-data-type-should-i-use">Which Integer Data Type Should I Use?</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#usage-of-integer-data-types">Usage Of Integer Data Types</a>
+        
+      </li>
+      
+        </ul>
+        
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<main role="main" class="col-12 col-md-8 print-main">
+  
+  
+  <h1 >Primitive Data Types</h1>
+  
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Tarot</li>
+      
+      
+      
+      
+      
+      
+      <li class="breadcrumb-item active" aria-current="page">Types</li>
+      
+      
+        
+        <li class="breadcrumb-item active" aria-current="page">Primitive Data Types</li>
+        
+        
+        
+
+      
+      
+      
+    </ol>
+  </nav>
+  
+  <p >Every programming language has some built-in data types that can be used</p>
+  <hr />
+  
+  
+  <div class="container ml-0">
+    <div class="row">
+      
+      <div class="col-2 px-0" style="text-wrap: nowrap;">
+        
+        <a class="btn text-primary print-hide" href="../../Getting%20Started/hello_world/"
+          title="Hello World"><i class="bi bi-chevron-left"></i></a>
+        
+        
+        <a class="btn text-muted print-hide"><i class="bi bi-chevron-right"></i></a>
+        
+      </div>
+      <div class="col px-0" style="text-align: right;">
+        
+        
+        <small><span class='git-page-authors git-authors'><a href='mailto:cool5tarxv@gmail.com'>Dusk</a></span></small>
+        <span>|</span>
+        
+        
+        
+        <span>2025-10-22</span>
+        
+        <button class="btn print-visible d-none" onclick="print_normal();"
+          title="Open NewTab"><i class="bi bi-arrow-up-right-square"></i></button>
+      </div>
+      <div class="col-1 col-sm-2 px-0 print-hide" style="text-align: right;text-wrap: nowrap;">
+        
+        
+        <a class="btn disabled print-hide d-none d-sm-inline"><i class="bi bi-pencil"></i></a>
+        
+        
+        
+        <button class="btn print-block d-none d-lg-inline" title="Print this article"
+          onclick="window.print();"><i class="bi bi-printer"></i></button>
+        
+        <span class="dropdown print-hide">
+          <button class="btn btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false"><i class="bi bi-list"></i></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <h6 class="dropdown-header">Share via</h6>
+            </li>
+            <li><button class="btn dropdown-item"
+                onclick="share_to_twitter('Primitive Data Types | Tarot','');"><i
+                  class="bi bi-twitter-x"></i>&nbsp;X.com</button></li>
+            <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i
+                  class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
+            <li><button class="btn dropdown-item" onclick="share_to_line();"><i
+                  class="bi bi-line"></i>&nbsp;LINE</button></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><button class="btn dropdown-item" onclick="window.print();"><i class="bi bi-printer"></i>&nbsp;Print</button></li>
+            <li><button class="btn dropdown-item" id="page-url-copy-btn"><i class="bi bi-clipboard"></i>&nbsp;Copy Url to clipboard</button></li>
+            <li>
+              
+              
+              <a class="btn dropdown-item disabled"><i class="bi bi-pencil"></i>&nbsp;Edit this article</a>
+              
+              
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li><button class="btn dropdown-item" onclick="print_view();"><i
+                  class="bi bi-file-earmark-text"></i>&nbsp;View in EmbedMode</button></li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <hr />
+  
+  <div >
+    
+    <html><head></head><body><h1 id="what-is-a-primitive-data-type">What is a Primitive Data Type?</h1>
+<p>A primitive data type is a type of data corresponding to the most basic parts of data, that would be inconvenient to break down further. For example, if there were three blocks on top of each other, remove the first two leaving the last block. The last block can be split in half, but it would no longer be a block then. Similarly primitive data types are types of data that is inconvenient to break down.</p>
+<h1 id="integer-primitive-data-types">Integer Primitive Data Types</h1>
+<p>Any programming language needs to deal with numbers in some way or another, unlike high level languages like Python there are multiple integer data types. </p>
+<h3 id="signed-and-unsigned">Signed and Unsigned</h3>
+<p>Each Integer Data Type will have the number of bits it can store as well if it is <strong>signed</strong> or <strong>unsigned</strong>. Signed represents whether the number can be negative and/or positive, for example if there is an <strong>8 bit integer</strong> that is <strong>signed</strong>:</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center">Bits representing an 8 bit <strong>signed</strong> integer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><span style="font-size:100px"><span style="color:blue">- </span>- - - - - - - </span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>The bit highlighted in blue will be used to identify if the number is negative or not. However this leaves the <strong>signed 8 bit integer</strong> with only 7 bits that can be used to store numbers. This makes it such that the maximum of a <strong>signed 8 bit integer</strong> is 127 and the minimum will be 128. (Note: 0 counts as a 'positive' number)</p>
+<p>The concept behind <strong>unsigned</strong> numbers are such that the number is assumed to never be negative which affords it the entire 8 bits of space.If there is an <strong>unsigned 8 bit integer</strong> the representation would look like:</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center">Bits representing an 8 bit <strong>unsigned</strong> integer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><span style="font-size:100px">- - - - - - - - </span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>As there is no need for negatives, all 8 bits are used to represent a positive number ranging from 0 to 255.</p>
+<h3 id="all-integer-data-types">All Integer Data Types</h3>
+<table class="table">
+<thead>
+<tr>
+<th>Bits</th>
+<th>Representation</th>
+<th>Signed (<strong>-</strong> is signed)</th>
+<th>Minimum</th>
+<th>Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Bool</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>i8</td>
+<td><strong>-</strong></td>
+<td>-128</td>
+<td>127</td>
+</tr>
+<tr>
+<td>8</td>
+<td>u8</td>
+<td></td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr>
+<td>16</td>
+<td>i16</td>
+<td><strong>-</strong></td>
+<td>-32,768</td>
+<td>32,767</td>
+</tr>
+<tr>
+<td>16</td>
+<td>u16</td>
+<td></td>
+<td>0</td>
+<td>65,535</td>
+</tr>
+<tr>
+<td>32</td>
+<td>i32</td>
+<td><strong>-</strong></td>
+<td>-2,147,483,648</td>
+<td>2,147,483,647</td>
+</tr>
+<tr>
+<td>32</td>
+<td>u32</td>
+<td></td>
+<td>0</td>
+<td>4,294,967,295</td>
+</tr>
+<tr>
+<td>64</td>
+<td>i64</td>
+<td><strong>-</strong></td>
+<td>-9,223,372,036,854,775,808</td>
+<td>9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td>64</td>
+<td>u64</td>
+<td></td>
+<td>0</td>
+<td>18,446,744,073,709,551,615</td>
+</tr>
+<tr>
+<td>32</td>
+<td>f32</td>
+<td><strong>-</strong></td>
+<td>~ -3.4 × 10³⁸</td>
+<td>~ 3.4 × 10³⁸</td>
+</tr>
+<tr>
+<td>64</td>
+<td>f64</td>
+<td><strong>-</strong></td>
+<td>~ -1.7 × 10³⁰⁸</td>
+<td>~ 1.7 × 10³⁰⁸</td>
+</tr>
+</tbody>
+</table>
+<p>(Note: Representation is the data type in Maven, <strong>i</strong> is signed and <strong>u</strong> is unsigned, lastly <strong>f</strong> is float)</p>
+<h3 id="floats">Floats</h3>
+<p>Floats represent decimals, the default decimal data type in Maven is <strong>f</strong>64, as there is a higher degree of precision versus <strong>f</strong>32</p>
+<h3 id="which-integer-data-type-should-i-use">Which Integer Data Type Should I Use?</h3>
+<p>If you find yourself in this position, stick with the default integer type (<strong>i</strong>32), unless the following conditions are met:
+- The numbers you are working with are bigger than <strong>i</strong>32's maximum (in which case <strong>u</strong>32 or higher will be required [<strong>i</strong>64 if negatives are involved as well])
+- The number is smaller than <strong>i</strong>32 and you need to be conservative about how much memory you use
+- A function takes a specific argument that is a different Integer Data Type
+(note: This is only a general guideline)</p>
+<h3 id="usage-of-integer-data-types">Usage Of Integer Data Types</h3>
+<div class="highlight position-relative"><button class="btn lantana_codeblock_copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>a = 1 // as a is implicitly the default integer, a is an i32
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>// you can declare integers of a different type using the integer shorthand:
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>b = 7u64 // b is now a u64 of value 7
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>c = 3.14 // c is by default an f64
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>d = 3.14f32
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>// Other bases for integers (other than 10) are also possible
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>hexadecimal = 0xf00d
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>octal = 0o777
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>binary = 0b1001
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>// Casting: Scenarios where you need to convert an integer data type into another integer data type
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>fn foreveri8(number: i8){
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>    println("I am an i8")
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>}
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>// If the function above, seems unfamiliar, it will be covered later
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>// The function takes a number of type i8
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>my_num = 168u64
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>// we can use the 'as' keyword to cast the u64 into an i8:
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>my_num2 = my_num as i8 // ERROR: 168 is above the maximum of an i8
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>// Let's try that again
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>my_num3 = 127u64
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>my_num4 = my_num3 as i8 // While you may also do: foreveri8(my_num3 as i8), it is considered better practice to keep it in a variable
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>foreveri8(my_num4) // I am an i8
+</code></pre></div></body></html><html><head><script>
+        const lantana_codeblock_copybtn_onclick = (btn) => {
+            const codeBlock = btn.parentNode.children[btn.parentNode.children.length - 1];
+            const icon = btn.querySelector('.bi-clipboard');
+
+            window.getSelection().selectAllChildren(codeBlock);
+            document.execCommand('copy');
+
+            icon.classList.add('text-success');
+            icon.classList.replace('bi-clipboard', 'bi-clipboard-check');
+        };
+        document.querySelectorAll('.lantana_codeblock_copybtn').forEach((element) => {
+            element.addEventListener('click', () => lantana_codeblock_copybtn_onclick(element));
+        });
+        </script></head><body></body></html>
+    
+  </div>
+</main>
+
+      </div>
+    </div>
+    <script src="../../js/theme.js"></script>
+    
+    
+    
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script async src="../../search/main.js"></script>
+    
+    
+  </div>
+  </div>
+
+  
+  
+  
+  
+  <footer class="border-top footer text-muted .position-absolute.bottom-0.start-50.translate-middle-x"
+    style="padding-top:15px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+  <div class="modal fade" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="searchModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg print-hide">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <input id="mkdocs-search-query" type="text" class="form-control"
+                        aria-label="Search" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div id="mkdocs-search-results">
+                    search-area-desc
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+  
+</body>
+
+</html>

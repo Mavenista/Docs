@@ -7,7 +7,8 @@ Every programming language needs to be able to print a line.
 
 In `Example.mvn`, write the following:
 ```
-print("Hello World from Maven!\n")
+println("Hello World from Maven!") // This is a comment, that means anything after the '//' will be ignored until the next line, it's useful for annotating code for example:
+// The above line prints a hello world statement ^
 ```
 
 To compile this run:
@@ -17,5 +18,6 @@ maven build
 
 Output:
 ```
-Hello World from Arcana!
+Hello World from Maven!
 ```
+

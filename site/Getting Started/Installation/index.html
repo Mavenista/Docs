@@ -26,9 +26,23 @@
   <meta http-equiv="content-language" content="en">
   
   
+  <meta property="og:site_name" content="Tarot" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title"
+    content="Installation | Tarot" />
+  <meta name="twitter:card" content="Summary Card" />
+  
+  <meta name="description" content="How to quickly get Maven set up!">
+  <meta property="og:description" content="How to quickly get Maven set up!" />
+  <meta name="twitter:description" content="How to quickly get Maven set up!" />
+  
+  
+  <meta property="og:image" content="../.." />
+  
+  
 
   
-  <title>Tarot</title>
+  <title>Installation | Tarot</title>
   
 
   
@@ -89,6 +103,9 @@
         <p>
         <div class="d-flex input-group mb-3">
           
+          <button class="btn btn-outline-secondary" onclick="toggle_nav(this);" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav" title="Show Navigation"><i class="bi bi-book"></i></button>
+          
           
           <input class="form-control" type="search" id="searchbox_mobile" accesskey="/"
             placeholder="Search in here" aria-label="Search">
@@ -120,31 +137,31 @@
             
             <li class="list-group-item"><a
                     class="text-decoration-none  text-muted"
-                    href="../../.">Home</a></li>
+                    href="../..">Home</a></li>
             
             
             
             <li class="list-group-item">
-                <a class="nav_cop  text-muted"
+                <a class="nav_cop  text-body"
                     aria-expanded="false" data-bs-toggle="collapse" role="button">Getting Started</a>
-                <ul class="collapse list-group list-group-flush  ">
+                <ul class="collapse list-group list-group-flush show ">
                     
             
             <li class="list-group-item"><a
-                    class="text-decoration-none  text-muted"
-                    href="../../Getting%20Started/Installation/">Installation</a></li>
+                    class="text-decoration-none  text-body"
+                    href="./">Installation</a></li>
             
             
             
             <li class="list-group-item"><a
                     class="text-decoration-none  text-muted"
-                    href="../../Getting%20Started/setting_things_up/">Setting Things Up</a></li>
+                    href="../setting_things_up/">Setting Things Up</a></li>
             
             
             
             <li class="list-group-item"><a
                     class="text-decoration-none  text-muted"
-                    href="../../Getting%20Started/hello_world/">Hello World</a></li>
+                    href="../hello_world/">Hello World</a></li>
             
             
                 </ul>
@@ -174,44 +191,125 @@
         
         
 
+<main role="main" class="col-12 col-md-8 print-main">
+  
+  
+  <h1 >Installation</h1>
+  
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Tarot</li>
+      
+      
+      
+      
+      <li class="breadcrumb-item active" aria-current="page">Getting Started</li>
+      
+      
+        
+        <li class="breadcrumb-item active" aria-current="page">Installation</li>
+        
+        
+        
 
+        
 
+        
 
-
-
-
-
-
-
-
-
-<div class="col-12 col-md-8">
-  <h1>About this site</h1>
-  <div class="card">
-    <div class="card-header">
-      <img class="img-structure" src="../../ -lantana/resources/lantana.svg" alt="Lantana" height="40em" />
+      
+      
+      
+      
+      
+    </ol>
+  </nav>
+  
+  <p >How to quickly get Maven set up!</p>
+  <hr />
+  
+  
+  <div class="container ml-0">
+    <div class="row">
+      
+      <div class="col-2 px-0" style="text-wrap: nowrap;">
+        
+        <a class="btn text-primary print-hide" href="../.."
+          title="Home"><i class="bi bi-chevron-left"></i></a>
+        
+        
+        <a class="btn text-primary print-hide" href="../setting_things_up/" title="Setting Things Up"><i
+            class="bi bi-chevron-right"></i></a>
+        
+      </div>
+      <div class="col px-0" style="text-align: right;">
+        
+        
+        <small><span class='git-page-authors git-authors'><a href='mailto:cool5tarxv@gmail.com'>Dusk</a></span></small>
+        <span>|</span>
+        
+        
+        
+        <span>2025-10-22</span>
+        
+        <button class="btn print-visible d-none" onclick="print_normal();"
+          title="Open NewTab"><i class="bi bi-arrow-up-right-square"></i></button>
+      </div>
+      <div class="col-1 col-sm-2 px-0 print-hide" style="text-align: right;text-wrap: nowrap;">
+        
+        
+        <a class="btn disabled print-hide d-none d-sm-inline"><i class="bi bi-pencil"></i></a>
+        
+        
+        
+        <button class="btn print-block d-none d-lg-inline" title="Print this article"
+          onclick="window.print();"><i class="bi bi-printer"></i></button>
+        
+        <span class="dropdown print-hide">
+          <button class="btn btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false"><i class="bi bi-list"></i></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <h6 class="dropdown-header">Share via</h6>
+            </li>
+            <li><button class="btn dropdown-item"
+                onclick="share_to_twitter('Installation | Tarot','');"><i
+                  class="bi bi-twitter-x"></i>&nbsp;X.com</button></li>
+            <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i
+                  class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
+            <li><button class="btn dropdown-item" onclick="share_to_line();"><i
+                  class="bi bi-line"></i>&nbsp;LINE</button></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><button class="btn dropdown-item" onclick="window.print();"><i class="bi bi-printer"></i>&nbsp;Print</button></li>
+            <li><button class="btn dropdown-item" id="page-url-copy-btn"><i class="bi bi-clipboard"></i>&nbsp;Copy Url to clipboard</button></li>
+            <li>
+              
+              
+              <a class="btn dropdown-item disabled"><i class="bi bi-pencil"></i>&nbsp;Edit this article</a>
+              
+              
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li><button class="btn dropdown-item" onclick="print_view();"><i
+                  class="bi bi-file-earmark-text"></i>&nbsp;View in EmbedMode</button></li>
+          </ul>
+        </span>
+      </div>
     </div>
-    <ul class="list-group list-group-flush">
-      <a href="https://lantana.wsoft.ws/">
-        <li class="list-group-item">about-lantana</li>
-      </a>
-      <a href="https://github.com/WSOFT-Project/lantana/issues">
-        <li class="list-group-item">Report issues</li>
-      </a>
-      <a href="https://lantana.wsoft.ws/credits/">
-        <li class="list-group-item">Credits</li>
-      </a>
-    </ul>
   </div>
-  <br />
-  <div class="card">
-    <div class="card-body">
-      <p>Lantana<br />
-        Copyright 2022 WSOFT. All rights reserved.</p>
-      <p>Lantana was made possible by MkDocs and other open source projects.</p>
-    </div>
+  
+  <hr />
+  
+  <div >
+    
+    
+    
   </div>
-</div>
+</main>
 
       </div>
     </div>
