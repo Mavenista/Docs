@@ -1,7 +1,9 @@
 ---
 title: Primitive Data Types
 summary: Every programming language has some built-in data types that can be used
+author: Dusk(Wyn)
 date : 2025-10-22
+
 ---
 # What is a Primitive Data Type?
 A primitive data type is a type of data corresponding to the most basic parts of data, that would be inconvenient to break down further. For example, if there were three blocks on top of each other, remove the first two leaving the last block. The last block can be split in half, but it would no longer be a block then. Similarly primitive data types are types of data that is inconvenient to break down.

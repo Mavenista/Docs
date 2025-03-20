@@ -29,7 +29,7 @@ plugins:
         show_email_address: false
         count_empty_lines: true
         fallback_to_empty: false
-        enabled: true
+        enabled: false
 
 markdown_extensions:
     - lantana

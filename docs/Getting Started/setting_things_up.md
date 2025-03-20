@@ -1,6 +1,7 @@
 ---
 title: Setting Things Up
 summary: Core settings for new users!
+author: Dusk(Wyn)
 date : 2025-10-22
 ---
 # Creating a Project

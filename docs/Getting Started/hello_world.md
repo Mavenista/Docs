@@ -1,7 +1,7 @@
 ---
 title: Hello World
 summary: The Most Elementary Of Tutorials
-author: Dusk
+author: Dusk(Wyn)
 date : 2025-10-22
 ---
 Every programming language needs to be able to print a line.
