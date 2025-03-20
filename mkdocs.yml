@@ -1,0 +1,71 @@
+site_name: Tarot
+
+docs_dir : 'docs'
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+theme: lantana
+
+nav:
+  - Home: index.md
+  - Getting Started: 
+    - Installation: Getting Started/Installation.md
+    - Setting Things Up: Getting Started/setting_things_up.md
+    - Hello World: Getting Started/hello_world.md
+  - Types: 
+    - Primitive Data Types: Types/primitives.md
+
+visible_search : true
+
+plugins:
+    - search:
+        lang : 'en'
+        min_search_length: 2
+    - git-revision-date
+    - awesome-pages
+    - git-authors:
+        show_email_address: true
+        count_empty_lines: true
+        fallback_to_empty: false
+        enabled: true
+
+markdown_extensions:
+    - lantana
+    - lantana.alerts2
+    - lantana.selector
+    - lantana.extensions.mdx_embedly
+    - lantana.extensions.mdx_wsid
+    - attr_list
+    - lantana.cards
+    - lantana.mtables
+    - footnotes
+    - pymdownx.highlight:
+       anchor_linenums: true
+    - lantana.codeblock_copybtn
+    - admonition
+    - pymdownx.arithmatex:
+       generic : true
+    - md_in_html
+    - pymdownx.details
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:mermaid2.fence_mermaid
+    - lantana.mermaid_precompile
+    - pymdownx.snippets
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.magiclink
+    - pymdownx.striphtml
+    - lantana.link_opennewtab
+    - lantana.alerts
+    - lantana.accordion
+    - lantana.tabs
