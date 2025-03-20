@@ -235,6 +235,22 @@
         
       </li>
       
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#stringcharacter-primitive-data-types">String/Character Primitive Data Types</a>
+        
+        <ul class="list-group list-group-flush">
+          
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#character-data-type">Character Data Type</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#rawstring-data-type">RawString Data Type</a>
+        
+      </li>
+      
+        </ul>
+        
+      </li>
+      
     </ul>
   </div>
 </div>
@@ -288,7 +304,7 @@
       <div class="col px-0" style="text-align: right;">
         
         
-        <small><span class='git-page-authors git-authors'><a href='mailto:cool5tarxv@gmail.com'>Dusk</a></span></small>
+        <small><span class='git-page-authors git-authors'><a href='mailto:cool5tarxv@gmail.com'>Dusk</a>, <a href='mailto:not.committed.yet'>Not Committed Yet</a></span></small>
         <span>|</span>
         
         
@@ -512,7 +528,32 @@
 <a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>my_num3 = 127u64
 <a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>my_num4 = my_num3 as i8 // While you may also do: foreveri8(my_num3 as i8), it is considered better practice to keep it in a variable
 <a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>foreveri8(my_num4) // I am an i8
-</code></pre></div></body></html><html><head><script>
+</code></pre></div>
+<h1 id="stringcharacter-primitive-data-types">String/Character Primitive Data Types</h1>
+<h3 id="character-data-type">Character Data Type</h3>
+<p>A Character is any single ascii that will be regarded as a character for example:
+</p><div class="highlight position-relative"><button class="btn lantana_codeblock_copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>MyChar = 65Character // 65 in ASCII is 'A'
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>MyASCII_CODE = MyChar as i32 // MyASCII_CODE now contains the literal ASCII code of 65
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>printf("The character is: %c\n",MyChar)
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>//output : The character is A
+</code></pre></div>
+It is not limited to letters and numbers as well, it can also represent various types of ASCII codes for example:<p></p>
+<p>The ASCII code 64 is <code>@</code></p>
+<p>As seen in the code example, this type's identifier is <code>Character</code></p>
+<p>What if we want a string?</p>
+<h3 id="rawstring-data-type">RawString Data Type</h3>
+<p>A raw string is essentially a <strong>fixed</strong> size array of <code>Characters</code> corresponding to <code>&amp;i8</code> in pointer form (this will be covered in more detail later).</p>
+<p>You actually already have created a string, when writing <code>"Hello World"</code>, this is a string.</p>
+<p>Let's try it out in a proper example:
+</p><div class="highlight position-relative"><button class="btn lantana_codeblock_copybtn position-absolute top-0 end-0"><i class="bi bi-clipboard"></i></button><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>x: RawString = "!@(#$($))" // syntax does not apply in strings
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>y = "I am a star \u{2B50}" // unicode is also supported with `\u{&lt;code&gt;}`
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>z = "Multi
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    line or using \n, did I mention \r is supported too?
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    "
+</code></pre></div><p></p>
+<p>The Identifier for this type is <code>RawString</code>, Currently there is no <code>String</code> in the builtins which is planned for later</p></body></html><html><head><script>
         const lantana_codeblock_copybtn_onclick = (btn) => {
             const codeBlock = btn.parentNode.children[btn.parentNode.children.length - 1];
             const icon = btn.querySelector('.bi-clipboard');

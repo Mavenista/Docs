@@ -86,3 +86,40 @@ my_num3 = 127u64
 my_num4 = my_num3 as i8 // While you may also do: foreveri8(my_num3 as i8), it is considered better practice to keep it in a variable
 foreveri8(my_num4) // I am an i8
 ```
+
+# String/Character Primitive Data Types
+
+### Character Data Type
+A Character is any single ascii that will be regarded as a character for example:
+```
+MyChar = 65Character // 65 in ASCII is 'A'
+
+MyASCII_CODE = MyChar as i32 // MyASCII_CODE now contains the literal ASCII code of 65
+
+printf("The character is: %c\n",MyChar)
+//output : The character is A
+```
+It is not limited to letters and numbers as well, it can also represent various types of ASCII codes for example:
+
+The ASCII code 64 is `@`
+
+As seen in the code example, this type's identifier is `Character`
+
+What if we want a string?
+
+### RawString Data Type
+
+A raw string is essentially a **fixed** size array of `Characters` corresponding to `&i8` in pointer form (this will be covered in more detail later).
+
+You actually already have created a string, when writing `"Hello World"`, this is a string.
+
+Let's try it out in a proper example:
+```
+x: RawString = "!@(#$($))" // syntax does not apply in strings
+y = "I am a star \u{2B50}" // unicode is also supported with `\u{<code>}`
+z = "Multi
+    line or using \n, did I mention \r is supported too?
+    "
+```
+
+The Identifier for this type is `RawString`, Currently there is no `String` in the builtins which is planned for later
