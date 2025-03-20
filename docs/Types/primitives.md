@@ -87,6 +87,7 @@ my_num4 = my_num3 as i8 // While you may also do: foreveri8(my_num3 as i8), it i
 foreveri8(my_num4) // I am an i8
 ```
 
+
 # String/Character Primitive Data Types
 
 ### Character Data Type
