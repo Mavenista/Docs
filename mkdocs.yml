@@ -1,4 +1,4 @@
-site_name: Tarot
+site_name: Maven
 
 docs_dir : 'docs'
 
@@ -26,7 +26,7 @@ plugins:
     - git-revision-date
     - awesome-pages
     - git-authors:
-        show_email_address: true
+        show_email_address: false
         count_empty_lines: true
         fallback_to_empty: false
         enabled: true
